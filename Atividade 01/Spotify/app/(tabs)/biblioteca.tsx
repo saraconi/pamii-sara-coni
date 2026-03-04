@@ -40,11 +40,11 @@ export default function Biblioteca() {
         {/* Playlist 1 */}
         <View style={styles.item}>
           <Image
-            source={require("../../assets/images/Playlist1.jpg")
+            source={require("../../assets/images/Playlist1.jpg")}
             style={styles.cover}
           />
           <View>
-            <Text style={styles.itemTitle}>Brazil 2020</Text>
+            <Text style={styles.itemTitle}>VibeTrap</Text>
             <Text style={styles.subText}>de Sara Souza</Text>
           </View>
         </View>
@@ -52,11 +52,11 @@ export default function Biblioteca() {
         {/* Playlist 2 */}
         <View style={styles.item}>
           <Image
-            source={require("../../assets/playlist2.jpg")}
+            source={require("../../assets/images/playlist2.jpeg")}
             style={styles.cover}
           />
           <View>
-            <Text style={styles.itemTitle}>WORK 2020</Text>
+            <Text style={styles.itemTitle}>Champion</Text>
             <Text style={styles.subText}>de Sara Souza</Text>
           </View>
         </View>
@@ -64,11 +64,11 @@ export default function Biblioteca() {
         {/* Playlist 3 */}
         <View style={styles.item}>
           <Image
-            source={require("../../assets/playlist3.jpg")}
+            source={require("../../assets/images/playlist3.jpeg")}
             style={styles.cover}
           />
           <View>
-            <Text style={styles.itemTitle}>2019 🌞🧡</Text>
+            <Text style={styles.itemTitle}>🌞🧡</Text>
             <Text style={styles.subText}>de Sara Souza</Text>
           </View>
         </View>
@@ -78,15 +78,18 @@ export default function Biblioteca() {
       {/* Player Fixo */}
       <View style={styles.player}>
         <Image
-          source={require("../../assets/images")  
+          source={require("../../assets/images/iconmusica2.png")}
           style={styles.playerImage}
         />
         <View style={{ flex: 1 }}>
           <Text style={styles.playerTitle}>
-            Best Friends, Right? • Amy Winehouse
+            Longe de mim 
+          </Text>
+           <Text style={styles.playerTitle}>
+            🄴 Kyan, MU540
           </Text>
           <Text style={styles.playerSub}>
-            MACBOOK PRO DE ISADORA
+            JBL Partybox 320
           </Text>
         </View>
         <Text style={styles.pause}>II</Text>
