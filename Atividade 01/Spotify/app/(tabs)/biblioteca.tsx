@@ -1,9 +1,18 @@
 import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+import Player from "../../components/ui/Spotify/Player";
+import UserAvatar from "../../components//ui/Spotify/UserAvatar";
 
 export default function Biblioteca() {
   return (
     <View style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+     <ScrollView
+     showsVerticalScrollIndicator={false}
+     contentContainerStyle={{ paddingBottom: 120 }}
+     >
+        <View style={styles.headerRow}>
+          <UserAvatar/>
+          <Text style={styles.title}>Sua biblioteca</Text>
+        </View>
 
         {/* Topo Música / Podcasts */}
         <View style={styles.topTabs}>
@@ -73,27 +82,41 @@ export default function Biblioteca() {
           </View>
         </View>
 
-      </ScrollView>
-
-      {/* Player Fixo */}
-      <View style={styles.player}>
-        <Image
-          source={require("../../assets/images/iconmusica2.png")}
-          style={styles.playerImage}
-        />
-        <View style={{ flex: 1 }}>
-          <Text style={styles.playerTitle}>
-            Longe de mim 
-          </Text>
-           <Text style={styles.playerTitle}>
-            🄴 Kyan, MU540
-          </Text>
-          <Text style={styles.playerSub}>
-            JBL Partybox 320
-          </Text>
+         <View style={styles.item}>
+          <Image
+            source={require("../../assets/images/Aranha.jpg")}
+            style={styles.cover}
+          />
+          <View>
+            <Text style={styles.itemTitle}>Sauce</Text>
+            <Text style={styles.subText}>de Sara Souza</Text>
+          </View>
         </View>
-        <Text style={styles.pause}>II</Text>
-      </View>
+
+         <View style={styles.item}>
+          <Image
+            source={require("../../assets/images/mpbplaylist.jpg")}
+            style={styles.cover}
+          />
+          <View>
+            <Text style={styles.itemTitle}>MPB</Text>
+            <Text style={styles.subText}>de Sara Souza</Text>
+          </View>
+        </View>
+
+         <View style={styles.item}>
+          <Image
+            source={require("../../assets/images/esteticarara.jpg")}
+            style={styles.cover}
+          />
+          <View>
+            <Text style={styles.itemTitle}>Estética Rara</Text>
+            <Text style={styles.subText}>de Sara Souza</Text>
+          </View>
+        </View>
+
+      </ScrollView>
+      <Player/>
     </View>
   );
 }
@@ -102,7 +125,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#121212",
-    paddingTop: 60,
+    paddingTop: 50,
     paddingHorizontal: 20,
   },
 
@@ -196,16 +219,17 @@ const styles = StyleSheet.create({
     fontSize: 22,
   },
 
-  player: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "#282828",
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-  },
+  player:{
+  position:"absolute",
+  bottom:0,
+  left:0,
+  right:0,
+  height:70,
+  backgroundColor:"hsl(0, 0%, 0%)",
+  flexDirection:"row",
+  alignItems:"center",
+  paddingHorizontal:10
+},
 
   playerImage: {
     width: 40,
@@ -227,6 +251,20 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     paddingHorizontal: 10,
+  },
+
+  headerRow:{
+    flexDirection:"row",
+    alignItems:"center",
+    gap:10,
+    marginBottom:20
+},
+
+  title: {
+    color: "white",
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 20,
   },
 
 });

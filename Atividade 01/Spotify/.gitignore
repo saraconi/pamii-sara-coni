@@ -41,3 +41,6 @@ app-example
 # generated native folders
 /ios
 /android
+
+# Garante que arquivos de texto sempre usem LF no repositório
+* text=auto eol=lf

@@ -1,11 +1,16 @@
 import { View, Text, StyleSheet, ScrollView, TextInput } from "react-native";
+import Player from "../../components/ui/Spotify/Player";
+import UserAvatar from "../../components//ui/Spotify/UserAvatar";
 
 export default function Buscar() {
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         
-        <Text style={styles.title}>Buscar</Text>
+        <View style={styles.headerRow}>
+            <UserAvatar/>
+            <Text style={styles.title}>Buscar</Text>
+        </View>
 
         {/* Barra de pesquisa */}
         <View style={styles.searchBox}>
@@ -47,9 +52,11 @@ export default function Buscar() {
             <Text style={styles.cardText}>Sertanejo</Text>
           </View>
         </View>
-
       </ScrollView>
+      <Player/>
     </View>
+
+    
   );
 }
 
@@ -57,7 +64,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#121212",
-    paddingTop: 60,
+    paddingTop: 50,
     paddingHorizontal: 20,
   },
 
@@ -114,4 +121,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
   },
+  headerRow:{
+    flexDirection:"row",
+    alignItems:"center",
+    marginBottom:15,
+    gap:10
+},
 });
