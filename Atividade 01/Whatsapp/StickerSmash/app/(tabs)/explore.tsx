@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
   },
   fabEdit: {
     position: "absolute",
-    right: 20,
+    right: 25,
     bottom: 110,
     backgroundColor: "#202c33",
     width: 50,
